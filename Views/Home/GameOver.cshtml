@@ -1,0 +1,25 @@
+@using iDeal.Models
+@model GameView
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game over, Loser!</h1>
+    @if(@Model.PlayerHandValue > 21)
+    {
+        <h2>You busted ...better luck next time! 🍀🤞🏻</h2>
+        <p>You had: @Model.PlayerHandValue </p>
+    }
+    else
+    {
+        <p> Dealer had: @Model.DealerHandValue | You had: @Model.PlayerHandValue </p>
+    }
+    <p><a href="/NewGame">New Game</a></p>
+</body>
+</html>

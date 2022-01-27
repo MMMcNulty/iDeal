@@ -1,0 +1,33 @@
+@using iDeal.Models
+@model GameView
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+        <div>
+        <p>Dealer Hand:</p>
+        <ul class="hand">
+        @foreach (var card in @Model.DealerCards)
+        {
+            <li class="card">@card.Face @card.Suit</li>
+        }
+        </ul>
+        @* <p>Dealer Hand Value: @Model.DealerHandValue</p> *@
+        <p> Player Hand:</p>
+        <ul class="hand">
+        @foreach (var card in @Model.PlayerCards)
+        {
+            <li @card.Suit == "♦" || @card.Suit == "♥" ? class="card" : class="redcard">@card.Face @card.Suit</li>
+        }
+        </ul>
+        <p>Your Hand Value: @Model.PlayerHandValue</p>
+        <a href="/hit">Hit</a> | <a href="/stand">Stand</a>
+</body>
+</html>

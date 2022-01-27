@@ -1,0 +1,29 @@
+@using iDeal.Models
+@model GameView
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dashboard">Return to Dashboard</a>
+    <div class="bet-container">
+    @if(@Model.BetValue == 0)
+    {
+        <partial name="BetFormPartial" />
+    }
+    </div>
+    <div>
+    @if(@Model.BetValue != 0)
+    {
+        <partial name="CardsPartial" />
+    }
+    </div>
+    
+</body>
+</html>

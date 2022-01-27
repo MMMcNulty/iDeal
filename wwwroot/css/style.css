@@ -1,0 +1,144 @@
+*{
+    margin: auto;
+}
+
+body {
+    margin:auto;
+    /* max-width: 800px; */
+    margin-top: 50px;
+    align-content: center;
+    text-align: center;
+    height: 100%; 
+}
+
+.nav {
+    margin: auto;
+    width: 850px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.welcome {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* USERS TABLE */
+table {
+    margin: 0 auto;
+}
+
+
+.styled-table {
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/* Grid
+-------------------------------------- */
+
+.form {
+    background-color: #eee;
+    font-family: Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    padding: 25px;
+    display: grid;
+    grid-row-gap: 5px;
+}
+
+.field {
+    border: 1px solid #ccc;
+    max-width: 600px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+input {
+    max-width: 400px;
+}
+
+label {
+    max-width: 400px;
+}
+
+.button {
+    appearance: none;
+    background-color: #8becd9;
+    border: none;
+    font-size: .9375rem;
+    margin-top: 20px;
+    padding: 10px;
+    /* without this, the button would be as 
+    wide as its column (and the Name field) */
+    justify-self: start;
+}
+
+.hand {
+    display: inline;
+}
+.card, .redcard {
+    margin: auto;
+    height: 40px;
+    width: 35px;
+    border-radius: 5px;
+    border: black;
+    border-style: solid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+.redcard {
+    color: red;
+}

@@ -1,0 +1,28 @@
+@model iDeal.Models.LoginUser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <form asp-action="Login">
+            @* ------Email------- *@
+            <span asp-validation-for="LoginEmail"></span>
+            <label asp-for="LoginEmail"></label>
+            <input asp-for="LoginEmail">
+
+            @* --------Password------- *@
+            <span asp-validation-for="LoginPassword"></span>
+            <label asp-for="LoginPassword"></label>
+            <input asp-for="LoginPassword">
+            <br>
+            <input type="submit" value="submit" class="button">
+        </form>
+    </div>
+</body>
+</html>

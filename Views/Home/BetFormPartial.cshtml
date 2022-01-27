@@ -1,0 +1,30 @@
+@using iDeal.Models
+@model GameView
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+            @* *********NAV BAR************ *@
+    <div class="nav">
+        <ul class="nav-links">
+            <li><a href="/NewGame">New Game</a></li>
+            <li><a href="/logout">Log Out</a></li>
+        </ul>
+    </div>
+    <form asp-action="SubmitBet">
+        <span asp-validation-for="BetValue"></span>
+        <label asp-for="BetValue">Input Your Bet:</label>
+        <input asp-for="BetValue">
+        <input type="submit" value="place bet" class="button">
+    </form>
+    <p> You have $@Model.RemainingBalance remaining. Your current bet is: @Model.BetValue</p>
+</body>
+</html>

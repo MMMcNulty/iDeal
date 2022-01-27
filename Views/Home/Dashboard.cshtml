@@ -1,0 +1,25 @@
+@using iDeal.Models
+@model User;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <h1>Welcome to iDeal, @Model.FirstName!</h1>
+    <h1>Your current account balance is: $@Model.ChipValue</h1>
+    <div class="nav">
+        <ul class="links">
+            <li><a href="/newgame">Start a Game</a></li>
+            <li><a href="/playerstats">View My Stats</a></li>
+            <li><a href="/logout">Log Out</a></li>
+        </ul>
+    </div>
+</body>
+</html>
